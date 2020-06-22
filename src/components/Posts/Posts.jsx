@@ -1,48 +1,22 @@
 import React from "react";
 import s from './Posts.module.css';
+import Post from "./Post/Post";
 
-let Posts = () => {
+let Posts = (props) => {
+
+    let postsComponent = props.posts.map(post => <Post className={s.post} title={post.title} shortText={post.text} key={post.id} url={post.picture} date={post.date}/>);
+
     return (
         <div className={s.posts}>
-            <ul className={s.listPosts}>
-                <li>
-                    <div className={s.title}>Post 1</div>
-                    <div>THis is my first post</div>
-                </li>
-                <li>
-                    <div className={s.title}>Post 1</div>
-                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci debitis excepturi harum illum nam officia quia quod temporibus voluptas. Cumque cupiditate deserunt, expedita labore laboriosam omnis reiciendis tempora voluptate.</div>
-                </li>
-                <li>
-                    <div className={s.title}>Post 1</div>
-                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur modi odio ut velit! Enim facere in iste nemo optio ratione veritatis. Aliquid consectetur culpa cupiditate dicta obcaecati perferendis repellat!</div>
-                </li>
-                <li>
-                    <div className={s.title}>Post 1</div>
-                    <div>THis is my first post</div>
-                </li>
-                <li>
-                    <div className={s.title}>Post 1</div>
-                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci debitis excepturi harum illum nam officia quia quod temporibus voluptas. Cumque cupiditate deserunt, expedita labore laboriosam omnis reiciendis tempora voluptate.</div>
-                </li>
-                <li>
-                    <div className={s.title}>Post 1</div>
-                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur modi odio ut velit! Enim facere in iste nemo optio ratione veritatis. Aliquid consectetur culpa cupiditate dicta obcaecati perferendis repellat!</div>
-                </li>
-                <li>
-                    <div className={s.title}>Post 1</div>
-                    <div>THis is my first post</div>
-                </li>
-                <li>
-                    <div className={s.title}>Post 1</div>
-                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci debitis excepturi harum illum nam officia quia quod temporibus voluptas. Cumque cupiditate deserunt, expedita labore laboriosam omnis reiciendis tempora voluptate.</div>
-                </li>
-                <li>
-                    <div className={s.title}>Post 1</div>
-                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur modi odio ut velit! Enim facere in iste nemo optio ratione veritatis. Aliquid consectetur culpa cupiditate dicta obcaecati perferendis repellat!</div>
-                </li>
-
-            </ul>
+            <div className={s.listPosts}>
+                {postsComponent}
+            </div>
+            <div>
+                <input type="text"></input>
+                <textarea></textarea>
+                <input type="file" accept="image/*" multiple />
+                <button>Create Post</button>
+            </div>
         </div>
     )
 }

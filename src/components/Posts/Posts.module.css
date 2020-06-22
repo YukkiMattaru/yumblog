@@ -1,12 +1,8 @@
 .listPosts {
-    padding: 5px 10px;
-}
-
-.listPosts li {
-    background-color: rgba(255,255,255, .8);
-    align-items: center;
-    padding: 20px;
-    border: 2px solid blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
     box-sizing: border-box;
 }
 
