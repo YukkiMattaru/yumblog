@@ -1,0 +1,17 @@
+.listPosts {
+    padding: 5px 10px;
+}
+
+.listPosts li {
+    background-color: rgba(255,255,255, .8);
+    align-items: center;
+    padding: 20px;
+    border: 2px solid blue;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+}

@@ -1,0 +1,17 @@
+.nav {
+    width: 15em;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav > li {
+    border: 3px solid #290671;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #7546D7;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 25%;
+}
